@@ -2,11 +2,11 @@ import * as React from "react";
 import { useBoolean, useId } from '@uifabric/react-hooks';
 import * as ReactWebChat from 'botframework-webchat';
 import { Dialog, DialogType } from 'office-ui-fabric-react/lib/Dialog';
-import { DefaultButton, IconButton } from 'office-ui-fabric-react/lib/Button';
+import { IconButton } from 'office-ui-fabric-react/lib/Button';
 import { Spinner } from 'office-ui-fabric-react/lib/Spinner';
 import { Dispatch } from 'redux'
 import { useRef } from "react";
-
+import { IButtonStyles } from '@fluentui/react';
 import { IChatbotProps } from "./IChatBotProps";
 import MSALWrapper from "./MSALWrapper";
 
@@ -190,9 +190,9 @@ export const PVAChatbotDialog: React.FunctionComponent<IChatbotProps> = (props) 
 
     };
 
-    const chatButtonStyles = {
+    const chatButtonStyles: IButtonStyles = {
         root: {
-            position: 'fixed',
+            position: "fixed",
             bottom: '20px',
             right: '20px',
             zIndex: 1000,
